@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mi Dashboard</title>
+</head>
+<body id="Index" style="background-image: url('./assets/img/imagen1.jpg')">
+<main class="main">
+    <!-- Widget para enlaces CSS -->
+    <section class="list-container">
+        <div class="list">
+            <div class="title">
+                <h2>Añade tu enlace de interés</h2>
+                <img src="./assets/img/enlace.png" alt="link" class="icon">
+            </div>
+            <div class="input-container">
+                <input type="text" id="name-input" placeholder="Nombre de tu enlace" required>
+                <input type="text" id="url-input" required placeholder="Pega aquí la URL">
+                <button id="add-link-button" class="add-link-button" aria-label="Añadir un nuevo enlace">Añadir enlace</button>
+            </div>
+            <ul id="links-container" class="links-container">
+                <p id="empty-message">No hay enlaces guardados.</p>
+            </ul>
+        </div>
+    </section>
+    <!-- Widget para reloj y fecha CSS -->
+    <section class="time-container">
+        <div class="clock-digital">
+            <h1 class="h1Reloj">Son las...</h1>
+            <div id="time" class="time"></div>
+            <div id="date" class="date"></div>
+            <div id="message" class="message"></div>
+        </div>
+    </section>
+    <!-- Widget para clima CSS -->
+    <section class="weather">
+        <form id="cityForm" class="city-form">
+            <input type="text" id="cityInput" placeholder="Escribe una ciudad" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="currentWeather" class="currentWeather">
+            <h2 id="locationName"></h2>
+            <p id="weatherCondition"></p>
+            <div class="current-data">
+                <div class="current-grades">
+                    <img id="weatherIcon" class="weather-icon" src="" alt="Icono del Tiempo">
+                    <div>
+                        <span id="temperature"></span>
+                        <img src="./assets/img/celsius.png" alt="grados">
+                    </div>
+                </div>
+                <ul>
+                    <li id="precipitation"></li>
+                    <li id="humidity"></li>
+                    <li id="windSpeed"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="forecast-wrapper">
+            <button id="scrollLeft" class="scroll-button"></button>
+            <div id="forecastWeather" class="forecastWeather"></div>
+            <button id="scrollRight" class="scroll-button"></button>
+        </div>
+    </section>
+    <!-- Widget para contraseña CSS -->
+    <section class="pass-container">
+        <div class="password">
+            <div class="title">
+                <h2>Crea tu contraseña segura</h2>
+                <img src="./assets/img/candado.png" alt="password" class="icon">
+            </div>
+            <div id="passwordForm" class="passwordForm">
+                <label for="length">Número de caracteres de la Contraseña</label>
+                <input type="number" id="length" name="length" min="12" max="50" value="12">
+                <button type="button" onclick="generatePassword()">Generar Contraseña</button>
+                <div id="passwordResultado" class="password-resultado"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer CSS -->
+    <footer class="footer">
+        <nav class="icons-container">
+            <div class="icons">
+                <a href="./reloj/reloj.html">
+                    <img src="./assets/img/reloj.png" alt="clock" class="icon">
+                </a>
+                <a href="./password/password.html">
+                    <img src="./assets/img/candado.png" alt="lock" class="icon">
+                </a>
+                <a href="./links/links.html">
+                    <img src="./assets/img/enlace.png" alt="link" class="icon">
+                </a>
+                <a href="./tiempo/tiempo.html">
+                    <img src="./assets/img/nube.png" alt="cloud" class="icon">
+                </a>
+            </div>
+        </nav>
+    </footer>
+</main>
+    <script src="./js/general.js"></script>
+    <script src="./links/links.js"></script>
+    <script src="./password/password.js"></script>
+    <script src="./reloj/reloj.js"></script>
+    <script src="./tiempo/tiempo.js"></script>
+</body>
+</html>

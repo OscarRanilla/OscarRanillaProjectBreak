@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tiempo</title>
+</head>
+<body style="background-image: url('../assets/img/imagen1.jpg')">
+    <header>
+        <a href="../index.html" class="go-home">
+        <img src="../assets/img/cohete.png" alt="goHome" class="icon">
+        <h2>GO HOME</h2>
+        </a>
+    </header>
+    <main class="main">
+        <div class="weather">
+            <!-- Formulario para cambiar de ciudad -->
+            <form id="cityForm" class="city-form">
+                <input type="text" id="cityInput" placeholder="Escribe una ciudad" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <!-- Código para el clima actual -->
+            <div id="currentWeather" class="currentWeather">
+                <h2 id="locationName"></h2>
+                <p id="weatherCondition"></p>
+                <div class="current-data">
+                    <div class="current-grades">
+                        <img id="weatherIcon" class="weather-icon" src="" alt="Icono del Tiempo">
+                        <div>
+                            <span id="temperature"></span>
+                            <img src="../assets/img/celsius.png" alt="grados">
+                        </div>
+                    </div>
+                    <ul>
+                        <li id="precipitation"></li>
+                        <li id="humidity"></li>
+                        <li id="windSpeed"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Previsión para las horas -->
+            <div class="forecast-wrapper">
+                <button id="scrollLeft" class="scroll-button"></button>
+                <div id="forecastWeather" class="forecastWeather">
+                <!-- En este punto el Js renderizará la previsión dinámica -->
+                </div>
+                <button id="scrollRight" class="scroll-button"></button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="icons-container">
+            <div class="icons">
+            <a href="../reloj/reloj.html">
+                <img src="../assets/img/reloj.png" alt="clock" class="icon">
+            </a>
+            <a href="../password/password.html">
+                <img src="../assets/img/candado.png" alt="lock" class="icon">
+            </a>
+            <a href="../links/links.html">
+                <img src="../assets/img/enlace.png" alt="link" class="icon">
+            </a>
+            <a href="../tiempo/tiempo.html">
+                <img src="../assets/img/nube.png" alt="cloud" class="icon">
+            </a>
+            </div>   
+        </nav>
+    </footer>
+    <script src="../js/general.js"></script>
+    <script src="./tiempo.js"></script>
+</body>
+</html>
